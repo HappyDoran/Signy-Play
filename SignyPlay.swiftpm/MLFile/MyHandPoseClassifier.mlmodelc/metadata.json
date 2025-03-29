@@ -1,0 +1,107 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "storagePrecision" : "Float32",
+    "outputSchema" : [
+      {
+        "isOptional" : "0",
+        "keyType" : "String",
+        "formattedType" : "Dictionary (String → Double)",
+        "type" : "Dictionary",
+        "name" : "labelProbabilities",
+        "shortDescription" : "A dictionary of labels and the corresponding confidences."
+      },
+      {
+        "isOptional" : "0",
+        "formattedType" : "String",
+        "type" : "String",
+        "name" : "label",
+        "shortDescription" : "Most likely hand pose category."
+      }
+    ],
+    "modelParameters" : [
+
+    ],
+    "author" : "Doran",
+    "specificationVersion" : 4,
+    "computePrecision" : "Float16",
+    "isUpdatable" : "0",
+    "stateSchema" : [
+
+    ],
+    "availability" : {
+      "macOS" : "10.15",
+      "tvOS" : "13.0",
+      "visionOS" : "1.0",
+      "watchOS" : "6.0",
+      "iOS" : "13.0",
+      "macCatalyst" : "13.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_neuralNetworkClassifier"
+    },
+    "inputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 1 × 3 × 21)",
+        "shortDescription" : "A hand pose to classify. Its multiarray encoding uses the first dimension to index time over 1 frame. The second dimension indexes x, y, and confidence of hand pose keypoint locations. The last dimension indexes the keypoint type, ordered as wrist, thumbCMC, thumbMP, thumbIP, thumbTip, indexMCP, indexPIP, indexDIP, indexTip, middleMCP, middlePIP, middleDIP, middleTip, ringMCP, ringPIP, ringDIP, ringTip, littleMCP, littlePIP, littleDIP, littleTip.",
+        "shape" : "[1, 3, 21]",
+        "name" : "poses",
+        "type" : "MultiArray"
+      }
+    ],
+    "classLabels" : [
+      "E",
+      "R",
+      "I",
+      "M",
+      "V",
+      "Blank",
+      "C",
+      "A",
+      "B",
+      "X",
+      "W",
+      "P",
+      "N",
+      "T",
+      "K",
+      "U",
+      "Y",
+      "Z",
+      "S",
+      "J",
+      "O",
+      "G",
+      "Q",
+      "H",
+      "D",
+      "F",
+      "L"
+    ],
+    "generatedClassName" : "MyHandPoseClassifier",
+    "userDefinedMetadata" : {
+      "Prediction Window Size" : "1",
+      "com.apple.createml.app.tag" : "150.3",
+      "com.apple.coreml.model.preview.type" : "handPoseClassifier",
+      "com.apple.createml.app.version" : "6.1",
+      "Target Frame Rate" : "30.0"
+    },
+    "neuralNetworkLayerTypeHistogram" : {
+      "Add" : 7,
+      "SoftmaxND" : 1,
+      "ActivationReLU" : 8,
+      "ReshapeStatic" : 3,
+      "Transpose" : 4,
+      "PoolingAverage" : 8,
+      "ExpandDims" : 2,
+      "BatchNorm" : 15,
+      "InnerProduct" : 2,
+      "Squeeze" : 1,
+      "Convolution" : 20
+    },
+    "method" : "predict"
+  }
+]
