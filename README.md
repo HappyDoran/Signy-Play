@@ -15,12 +15,6 @@ WWDC25 Swift Student Challenge에 혼자 제출해 **Winner**로 선정된 작�
 ## :fireworks: Screenshots
 
 <p align="center">
-  <img src="ScreenShot/Select_Quiz_View.png" width="45%" alt="Alphabet과 Words 퀴즈 카드가 놓인 첫 화면">
-  <img src="ScreenShot/Select_Quiz_Option_View.png" width="45%" alt="Words 퀴즈의 문제 수를 5, 10, 15개 중에서 고르는 화면">
-</p>
-<p align="center"><sub>왼쪽: 퀴즈 주제 선택(알파벳·단어) · 오른쪽: 문제 수 선택</sub></p>
-
-<p align="center">
   <img src="ScreenShot/Quiz_View.png" width="80%" alt="카메라에 비친 손을 초록 상자로 인식하고 오른쪽에 문제 카드 B와 인식 결과 B 97.9%를 보여 주는 퀴즈 화면">
 </p>
 <p align="center"><sub>퀴즈 화면: 왼쪽 카메라에서 손을 찾아 표시하고, 오른쪽에 문제 카드와 지금 인식한 글자·확신도를 보여 줍니다</sub></p>
